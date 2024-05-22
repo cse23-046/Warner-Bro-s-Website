@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link rel="stylesheet" href="style.css">   
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: plum;
+        }
+        header {
+            background-color: black;
+            color:hotpink;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin: 30px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 30px;
+        }
+        .movie {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: plum;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .movie img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .movie h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .movie p {
+            margin-top: 5px;
+            color: #666;
+        }
+        /* Navigation Slide Bar */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+        .sidenav a {
+            padding: 10px 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        
+       .movie-list-container{
+
+              padding: 20px;
+       }
+
+       
+        .movie-list{
+            display: flex;
+            align-items: center;
+            height: 300px ;
+      }
+
+ .movie-list-item{
+    margin-right:30px ;
+
+ }
+  .movie-list-item :hover .movie-list-item-image{
+       transform: scale(1.2);
+
+  }
+
+  .social-icons a img {
+    width: 30px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+    </style>    
+</head>
+<body>
+<header>
+ <img src="wb img.jpeg" alt="Warner Bros. Logo" width="250" height="180">
+    <h1>WARNER BRO'S</h1>
+    <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776; Open</span>
+    <!-- Search bar with search icon -->
+    <div class="search" style="position: absolute; top: 10px; right: 10px;">
+        <input type="search" id="searchInput" placeholder="Search">
+        <img src="search.png" alt="Search" id="searchIcon" style="width: 20px; height: 20px; cursor: pointer;">
+    </div>
+        
+  </div>
+</header>
+
+<div class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="tvshows.html">TV Shows</a>
+    <a href="gamesandapps.html">Games and Apps</a>
+    <a href="collections.html">Collections</a>
+    <a href="feedback.html">Feedback</a>
+    
+</div> 
+
+
+
+<div class="Collections">
+    <img src="dc.jpeg" alt="  DC ">
+</div>
+
+
+<div class="Collections">
+    <img src="after.jpeg" alt="Love and Romance ">
+</div>
+
+
+<div class="Collections">
+    <img src="sing.jpeg" alt="Must Watch ">
+    
+</div>
+
+
+<div class="Collections">
+    <img src="a man.jpeg" alt="Hot and New ">
+    
+</div>
+
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="insta.jpeg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="youtube.png
+            " alt="YouTube"></a>
+    </div>
+</footer>
+<script>
+function toggleNav() {
+  var sidebar = document.getElementById("mySidenav");
+  if (sidebar.style.width === "120px") {
+    sidebar.style.width = "0";
+  } else {
+    sidebar.style.width = "120px";
+  }
+}
+</script>
+</body>
+</html>

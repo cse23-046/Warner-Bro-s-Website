@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games and Apps</title>
+    <link rel="stylesheet" href="style.css">   
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: plum;
+        }
+        header {
+            background-color: black;
+            color:hotpink;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin: 30px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 30px;
+        }
+        .movie {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: plum;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .movie img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .movie h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .movie p {
+            margin-top: 5px;
+            color: #666;
+        }
+        /* Navigation Slide Bar */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+        .sidenav a {
+            padding: 10px 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        
+       .movie-list-container{
+
+              padding: 20px;
+       }
+
+       
+        .movie-list{
+            display: flex;
+            align-items: center;
+            height: 300px ;
+      }
+
+ .movie-list-item{
+    margin-right:30px ;
+    
+ }
+  .movie-list-item :hover .movie-list-item-image{
+       transform: scale(1.2);
+
+  }
+
+  .movie-list-item-image{
+       transition: all 1s ease-in-out; 
+       width: 250px;
+       height: 180px;
+       object-fit: cover;
+
+
+  }
+
+
+  .social-icons a img {
+    width: 30px; 
+    height: auto; 
+    margin-right: 10px; 
+
+  }
+    </style>    
+</head>
+<body>
+<header>
+ <img src="wb img.jpeg" alt="Warner Bros. Logo" width="250" height="180">
+    <h1>WARNER BRO'S</h1>
+    <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776; Open</span>
+    <!-- Search bar with search icon -->
+    <div class="search" style="position: absolute; top: 10px; right: 10px;">
+        <input type="search" id="searchInput" placeholder="Search">
+        <img src="search.png" alt="Search" id="searchIcon" style="width: 20px; height: 20px; cursor: pointer;" onclick="search()">
+    </div>
+        
+  </div>
+</header>
+
+<div class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="tvshows.html">TV Shows</a>
+    <a href="gamesandapps.html">Games and Apps</a>
+    <a href="collections.html">Collections</a>
+    <a href="feedback.html">Feedback</a>
+    
+</div> 
+
+<div class="Video Game">
+    <img src="mortal.jpeg" alt="Mortal Kombat 1 ">
+    <h3>Mortal Kombat 1 is a 2023 fighting game developed by NetherRealm Studios and published by Warner Bros. Games. It is the twelfth main installment in the Mortal Kombat series, and serves as its second reboot after 2011's Mortal Kombat. </h3>
+    <p>Action,Adventure</p>
+</div>
+
+
+<div class="Video Game">
+    <img src="suiscide squad.jpeg" alt="Suicide Squad:Kill the Justice Legue ">
+    <h3>Suicide Squad: Kill the Justice League is a 2024 action-adventure shooter game developed by Rocksteady Studios and published by Warner Bros. Games. Based on the DC Comics team Suicide Squad, it is a spin-off of the Batman: Arkham series, and a follow-up to Batman: Arkham Knight.</h3>
+    <p>Action,Adventure</p>
+</div>
+
+
+<div class="Video Game">
+    <img src="game of thrones.png" alt="Game of Thrones: Conquest ">
+    <h3>Based on the award-winning HBO series, Game of Thrones: Conquest™ is a free-to-play strategy game that puts players at the head of their own powerful House, with the ultimate goal of claiming the Iron Throne. Build your great house, raise your army, conquer iconic Seats of Power, and rule the Seven Kingdoms.</h3>
+    <p>Action </p>
+</div>
+
+
+<div class="Video Game">
+    <img src="imgbatman.jpeg" alt="Batman: Return to Arkham">
+    <h3>Batman:Return to Arkham</h3>
+    <p>Action</p>
+</div>
+
+
+<div class="Video Game">
+    <img src="imginjustice.jpeg" alt="Injustice 2">
+    <h3>Injustice 2 is a 2017 fighting video game. It is the sequel to 2013's Injustice: Gods Among Us and the second installment in the Injustice series which is based on the DC Universe. It is developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment.</h3>
+    <p>Action, Animation</p>
+</div>
+
+
+<div class="Video Game">
+    <img src="lego.jpeg" alt="LEGO Star Wars: The Skywalker Saga ">
+    <h3>Lego Star Wars: The Skywalker Saga is a 2022 Lego-themed action-adventure game developed by Traveller's Tales and published by Warner Bros. Games. It is the sixth installment in the Lego Star Wars video game series. </h3>
+    <p>Action, Animation</p>
+</div>
+
+
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="insta.jpeg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="youtube.png" alt="YouTube"></a>
+    </div>
+</footer>
+<script>
+function toggleNav() {
+    var sidebar = document.getElementById("mySidenav");
+    if (sidebar.style.width === "120px") {
+        sidebar.style.width = "0";
+    } else {
+        sidebar.style.width = "120px";
+    }
+}
+
+function search() {
+    var input, filter, games, game, title, description, genre, i;
+    input = document.getElementById("searchInput");
+    filter = input.value.toLowerCase();
+    games = document.getElementsByClassName("Video Game");
+    for (i = 0; i < games.length; i++) {
+        game = games[i];
+        title = game.getElementsByTagName("h3")[0];
+        description = game.getElementsByTagName("h3")[0];
+        genre = game.getElementsByTagName("p")[0];
+        if (title.innerText.toLowerCase().indexOf(filter) > -1 || description.innerText.toLowerCase().indexOf(filter) > -1 || genre.innerText.toLowerCase().indexOf(filter) > -1) {
+            game.style.display = "";
+        } else {
+            game.style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>

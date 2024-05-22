@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games and Apps</title>
+    <link rel="stylesheet" href="style.css">   
+
+    <style>
+    body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: plum;
+        }
+        header {
+            background-color: black;
+            color: hotpink;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin: 30px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 30px;
+        }
+        .movie {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: plum;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .movie img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .movie h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .movie p {
+            margin-top: 5px;
+            color: #666;
+        }
+        /* Navigation Slide Bar */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+        .sidenav a {
+            padding: 10px 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        .search {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 130px;
+            height: 20px;
+        }
+
+        .search input[type="search"] {
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .search input[type="search"]:focus {
+            outline: none;
+        }
+        
+        .searchable-content {
+            display: block;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .searchable-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .searchable-content h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .searchable-content p {
+            margin-top: 5px;
+            color: #666;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .search img {
+           width: 16px; 
+          height: 16px; 
+     }
+     .social-icons a img {
+    width: 20px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+.search {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex; 
+    align-items: center; 
+}
+.search-input {
+    width: 150px; 
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-left: 5px; 
+    cursor: pointer;
+}
+
+ 
+    </style>    
+</head>
+<body>
+<header>
+    <img src="wb img.jpeg" alt="Warner Bros. Logo" width="250" height="180">
+    <h1>WARNER BRO'S</h1>
+    <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776; Open</span>
+    
+</header>
+
+<div class="search">
+    <input type="search" id="searchInput" class="search-input" placeholder="Search TV Shows">
+    <img src="search.png" alt="Search" onclick="search()">
+</div>
+
+
+<div class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="tvshows.html">TV Shows</a>
+    <a href="gamesandapps.html">Games and Apps</a>
+    <a href="collections.html">Collections</a>
+    <a href="feedback.html">Feedback</a>
+</div> 
+
+
+<div class="TV Show searchable-content">
+    <img src="sandman.jpeg" alt="The sand man">
+    <div class="show-info">
+        <span class="title">The Sand Man</span>
+        <p>A little girl with supernatural imagination powers brings to life a monster named Sandman, who protects her in times of distress.</p>
+        <p>Drama</p>
+    </div>
+</div>
+
+<div class="TV Show searchable-content">
+    <img src="american dad.jpeg" alt="American Dad">
+    <div class="show-info">
+        <span class="title">American Dad</span>
+        <p>Smith's family consists of four members which include an unusual goldfish that has the mind of a German football player and an alien. Smith, along with the CIA, tries to save America from threats.</p>
+        <p>Sitcom</p>
+    </div>
+</div>
+
+<div class="TV Show searchable-content">
+    <img src="simpsons.png" alt="The Simpsons">
+    <div class="show-info">
+        <span class="title">The Simpsons</span>
+    <h3>Features a satirical portrayal of middle-class American lifestyle. Caricatures certain facets of the American society, culture, television and many features of the human condition.</h3>
+    <p>Sitcom</p>
+</div>
+
+<div class="TV Show searchable-content">
+    <img src="imglooney.jpeg" alt="The Looney Tunes Show">
+    <div class="show-info">
+     <span class="title"> The Looney Tunes Show</span>
+    <h3>Bugs Bunny, Daffy Duck and the rest of the `Looney Tunes' characters are back with more adventures for a new generation of viewers. The animated series features roommates Bugs and Daffy moving out of the woods and into the suburbs, interacting with their neighbours, who happen to be other `Looney Tunes' favourites - including Sylvester, Tweety, Porky Pig and Foghorn Leghorn. Also featured in the series are CGI Wile E. Coyote-Road Runner shorts and `Merrie Melodies' music videos.</h3>
+    <p>Sitcom, Kids</p>
+</div>
+
+<div class="TV Show searchable-content">
+    <img class="TVshow-list-item-image" src="imgallamerican.jpeg" alt="">
+    <span class="TVshow-list-item-title searchable-content"> All American</span>
+    <h3>Spencer James is a rising football player who makes the shift to an affluent Beverly Hills school on his coach's advice. He struggles to find his footing as the new team is threatened by his arrival.</h3>
+    <p>Drama </p>
+</div>
+
+<div class="TV Show searchable-content">
+    <img class="TVshow-list-item-image" src="gandg.jpeg" alt="">
+    <span class="TV Show-list-item-title searchable-content">Ginny and Georgia</span>
+    <h3> Teenage Ginny and her family yearn to put down roots in a picturesque New England town after years on the run.</h3>
+    <p>Drama </p>
+</div>
+
+
+<div class="TV Show searchable-content">
+    <img class="TVshow-list-item-image" src="river.jpeg" alt="">
+    <span class="TVshow-list-item-title searchable-content">Riverdale </span>
+    <h3>Archie, Betty, Jughead and Veronica tackle being teenagers in a town that is rife with sinister happenings and blood-thirsty criminals.</h3>
+    <p>Drama </p>
+</div>
+
+<div class="TV Show searchable-content">
+    <img class="TVshow-list-item-image" src="umbrellaaca.jpeg" alt="">
+    <span class="TVshow-list-item-title searchable-content"> The Umbrella Academy</span>
+    <h3> On one day in 1989, 43 infants are inexplicably born to random, unconnected women who showed no signs of pregnancy the day before. Seven are adopted by billionaire industrialist Sir Reginald Hargreeves, who creates the Umbrella Academy and prepares his "children" to save the world </h3>
+    <p>Drama </p>
+</div>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="insta.jpeg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="youtube.png" alt="YouTube"></a>
+    </div>
+</footer>
+<script>
+function toggleNav() {
+    var sidebar = document.getElementById("mySidenav");
+    if (sidebar.style.width === "120px") {
+        sidebar.style.width = "0";
+    } else {
+        sidebar.style.width = "120px";
+    }
+}
+
+function search() {
+    var input, filter, shows, show, title, description, genre, i;
+    input = document.getElementById("searchInput");
+    filter = input.value.toLowerCase();
+    shows = document.getElementsByClassName("searchable-content");
+    for (i = 0; i < shows.length; i++) {
+        show = shows[i];
+        title = show.getElementsByTagName("h3")[0];
+        description = show.getElementsByTagName("h3")[1];
+        genre = show.getElementsByTagName("p")[0];
+        if (title.innerText.toLowerCase().indexOf(filter) > -1 || description.innerText.toLowerCase().indexOf(filter) > -1 || genre.innerText.toLowerCase().indexOf(filter) > -1) {
+            show.style.display = "";
+        } else {
+            show.style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>

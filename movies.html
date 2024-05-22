@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="style.css">   
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: plum;
+        }
+        header {
+            background-color: black;
+            color: hotpink;
+            padding: 10px;
+            text-align: center;
+            position: relative; /* Added */
+        }
+        h1 {
+            margin: 30px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 30px;
+        }
+        .movie {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: plum;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex; /* Added */
+            align-items: center; /* Added */
+        }
+        .movie img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px; /* Added */
+        }
+        .movie-details {
+            flex: 1; /* Added */
+        }
+        .movie h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        .movie p {
+            margin-top: 5px;
+            color: #666;
+        }
+        /* Navigation Slide Bar */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+        .sidenav a {
+            padding: 10px 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .search {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .search input[type="search"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            margin-right: 5px;
+        }
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .search-icon:hover {
+            opacity: 0.7;
+        }
+
+        .social-icons a img {
+    width: 20px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+    </style>    
+</head>
+<body>
+
+<header>
+    <img src="wb img.jpeg" alt="Warner Bros. Logo" width="250" height="180">
+    <h1>WARNER BROS</h1>
+    <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776; Open</span>
+    <div class="search">
+        <input type="search" id="searchInput" placeholder="Search">
+        <img src="search.png" alt="Search" class="search-icon" onclick="search()">
+    </div>
+</header>
+
+<div class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="tvshows.html">TV Shows</a>
+    <a href="gamesandapps.html">Games and Apps</a>
+    <a href="collections.html">Collections</a>
+    <a href="feedback.html">Feedback</a>
+</div> 
+  
+<div class="container">
+    <div class="movie">
+        <img src="imagesinsideout.jpeg" alt="Inside Out 2">
+        <div class="movie-details">
+            <h3>Inside Out 2</h3>
+            <p>Joy, Sadness, Anger, Fear and Disgust have been running a successful operation by all accounts. However, when Anxiety shows up, they aren't sure how to feel</p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <img src="imagesluca.jpeg" alt="Luca">
+        <div class="movie-details">
+            <h3>Luca</h3>
+            <p>Luca, a sea monster, befriends Alberto, another one of his kind who takes him on a land adventure. He experiences an exciting summer while keeping his parents in the dark.</p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <img src="imagesmulan.jpeg" alt="Mulan">
+        <div class="movie-details">
+            <h3>Mulan</h3>
+            <p>Mulan is a 1998 American animated musical coming-of-age action-adventure film produced by Walt Disney Feature Animation for Walt Disney Pictures.</p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <img src="imagesscream.jpeg" alt="Scream">
+        <div class="movie-details">
+            <h3>Scream</h3>
+            <p>Sam Carpenter returns to Woodsboro after her sister gets attacked by the Ghostface. She approaches Dewey Riley to help catch the killer, who warns Sidney and Gale.</p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <img src="imagestheequalizer.jpeg" alt="The Equalizer">
+        <div class="movie-details">
+            <h3>The Equalizer</h3>
+            <p>With his violent past behind him, McCall decides to lead a quiet life. However, when he sees a young girl, Teri, being controlled by violent gangsters, he once again takes up the fight for justice.</p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <img src="Top gun.jpeg" alt="Top Gun Maverick">
+        <div class="movie-details">
+            <h3>Top Gun Maverick</h3>
+            <p>Thirty years of service leads Maverick to train a group of elite TOPGUN graduates to prepare for a high-profile mission while Maverick battles his past demons.</p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <img src="ananabelle.jpeg" alt="Annabelle">
+        <div class="movie-details">
+            <h3>Annabelle</h3>
+            <p>John and Mia Form are attacked by members of a satanic cult that uses their old doll as a conduit to make their life miserable. This unleashes a string of paranormal events in the Forms' residence.</p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <img src="the bodyguard.jpeg" alt="The Bodyguard">
+        <div class="movie-details">
+            <h3>The Bodyguard</h3>
+            <p>Rachel, a singer and an actor, receives death threats from an obsessive stalker. However, things turn chaotic when she hires Frank, an ex-Secret Service agent, to be her bodyguard and falls for him.</p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <img src="moana.jpeg" alt="Moana 2">
+        <div class="movie-details">
+            <h3>Moana 2</h3>
+            <p>Moana journeys to the far seas of Oceania after receiving an unexpected call from her wayfinding ancestors.</p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <img src="matrix.jpeg" alt="The Matrix 4">
+        <div class="movie-details">
+            <h3>The Matrix 4</h3>
+            <p>Thomas Anderson's seemingly ordinary life ends when he accepts Morpheus's offer, only to wake up to a new, more secure and much more dangerous Matrix.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="insta.jpeg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="youtube.png" alt="YouTube"></a>
+    </div>
+</footer>
+
+<script>
+function toggleNav() {
+    var sidebar = document.getElementById("mySidenav");
+    if (sidebar.style.width === "120px") {
+        sidebar.style.width = "0";
+    } else {
+        sidebar.style.width = "120px";
+    }
+}
+
+function search() {
+    var input, filter, movies, movie, title, description, i;
+    input = document.getElementById("searchInput");
+    filter = input.value.toLowerCase();
+    movies = document.getElementsByClassName("movie");
+    for (i = 0; i < movies.length; i++) {
+        movie = movies[i];
+        title = movie.getElementsByTagName("h3")[0];
+        description = movie.getElementsByTagName("p")[0];
+        if (title.innerText.toLowerCase().indexOf(filter) > -1 || description.innerText.toLowerCase().indexOf(filter) > -1) {
+            movie.style.display = "";
+        } else {
+            movie.style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
